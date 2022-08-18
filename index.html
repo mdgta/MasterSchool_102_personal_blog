@@ -63,24 +63,26 @@
 <main id="global-main">
 	<section class="blog-navigation">
 		<section class="blog-navigation-container">
-			<article>
-				<figure>
-					<picture>
-						<img src="src/images/blog-1.jpg" alt="Qualisque" />
-					</picture>
-					<figcaption>
-						Qualisque
-					</figcaption>
-				</figure>
-				<header>
-					<h3>
-						Qui no stet ferri qualisque ut clita scripserit nec
-					</h3>
-					<p>
-						Graham Griffiths
-					</p>
-				</header>
-			</article>
+			<a href="posts/blog_1.html">
+				<article>
+					<figure>
+						<picture>
+							<img src="src/images/blog-1.jpg" alt="Qualisque" />
+						</picture>
+						<figcaption>
+							Qualisque
+						</figcaption>
+					</figure>
+					<header>
+						<h3>
+							Qui no stet ferri qualisque ut clita scripserit nec
+						</h3>
+						<p>
+							Graham Griffiths
+						</p>
+					</header>
+				</article>
+			</a>
 		</section>
 		<nav class="blog-navigation-nav">
 			<button class="button-selected">1</button>
@@ -91,7 +93,7 @@
 </main>
 
 <script>
-let q = document.querySelector(".blog-navigation-container article");
+let q = document.querySelector(".blog-navigation-container").children[0];
 for (let i = 0, node, img; i < 5; i++) {
 	node = q.cloneNode(true);
 	img = node.querySelector("img");
@@ -137,7 +139,6 @@ for (let i = 0, node, img; i < 5; i++) {
 			<picture>
 				<img src="src/images/recent-1.jpg" alt="Pro eu apeirian suavitate dissentiet" />
 			</picture>
-			<div class="crop" data-src="src/images/recent-1.jpg"></div>
 			<figcaption>
 				<p>
 					Pro eu apeirian suavitate dissentiet
@@ -164,7 +165,6 @@ for (let i = 0, node, img; i < 5; i++) {
 			<picture>
 				<img src="src/images/recent-3.jpg" alt="Ius delectus instructior eu, eu eum mentitum percipit" />
 			</picture>
-			<div class="crop" data-src="src/images/recent-3.jpg"></div>
 			<figcaption>
 				<p>
 					Ius delectus instructior eu, eu eum mentitum percipit
@@ -311,17 +311,17 @@ for (let i = 0, node, img; i < 5; i++) {
 				</ul>
 			</section>
 		</section>
-		<section class="footer-notes-copyright">
-			<h3>
-				© Copyright information &amp; credits
-			</h3>
-			<p>
-				Resources used: Udacity, PluralSight, Masterschool.
-			</p>
-			<p>
-				Blog website based on the proposed layout, theme and social icons of the <a href="https://www.figma.com/file/wCmTWu3Gynwi2TcIFRRbf9/Blog-Website-Design" rel="nofollow noopener">Figma</a> project.
-			</p>
-		</section>
+	</section>
+	<section class="footer-notes-copyright">
+		<h3>
+			© Copyright information &amp; credits
+		</h3>
+		<p>
+			Resources used: Udacity, PluralSight, Masterschool.
+		</p>
+		<p>
+			Blog website based on the proposed layout, theme and social icons of the <a href="https://www.figma.com/file/wCmTWu3Gynwi2TcIFRRbf9/Blog-Website-Design" rel="nofollow noopener">Figma</a> project.
+		</p>
 	</section>
 </footer>
 

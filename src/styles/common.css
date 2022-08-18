@@ -52,8 +52,8 @@ button:not(.button-selected):hover {
 
 /* cropped images */
 .crop::after {
-    width: 70px;
-    height: 48px;
+    max-width: 70px;
+    height: auto;
     background: attr(data-src url);
 }
 
@@ -219,10 +219,11 @@ body {
 
 
 /* sidebar - reccent */
+/*
 .sidebar-group-recent picture {
     overflow: hidden;
     flex-basis: 40%;
-}
+}*/
 /*
 
         TEST #############################################################################
@@ -236,6 +237,7 @@ body {
 
 .sidebar-group-recent figure {
     display: flex;
+    flex-wrap: wrap;
     gap: 16px;
     line-height: 1.5em;
 }
