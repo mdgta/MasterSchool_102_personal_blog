@@ -1,29 +1,51 @@
+/* ================================ *\
+    # defaults
+\* ================================ */
+
 :root {
-    /*--spacing-outer: 14px;*/
+    font-size: 10px;
 }
 
 /* ================================ *\
-    # body layout
+    # header area
 \* ================================ */
 
-body {
-    display: grid;
-    grid: auto 1fr auto / 1fr 40%;
-    grid-template-areas:
-        "global-header global-header"
-        "global-main global-aside"
-        "global-footer global-footer";
-    column-gap: 0;
+#global-header menu {
+    font-size: 18px;
 }
 
-.blog-navigation-container > article {
-    flex-basis: calc(50% - 15px);
-}
+/* ================================ *\
+    # main content
+\* ================================ */
 
-/* blog navigation buttons */
-.blog-navigation-nav {
-    justify-content: center;
+.blog-navigation-container article {
+    width: 48%;
+}
+.blog-navigation nav {
+    padding: 0 1.5%;
 }
 .blog-navigation-nav-next {
-    flex-grow: 0;
+    flex: 0;
+}
+.blog-content blockquote {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: larger
+}
+
+/* ================================ *\
+    # footer
+\* ================================ */
+
+.footer-contact-card {
+    font-size: 100%;
+}
+
+.footer-notes {
+    display: grid;
+    grid: auto / 1fr 1.3fr;
+}
+
+.footer-notes-secondary {
+    font-size: 100%;
 }

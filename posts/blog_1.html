@@ -6,35 +6,22 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- base url -->
-    <base href="../" />
+	<base href="../" />
 	<!-- css -->
-	<!-- default layout -->
+	<!-- mobile layout (default) -->
 	<link rel="stylesheet" href="/src/styles/common.css" />
-	<!-- screens 560px-719px -->
-	<link rel="stylesheet" media="screen and (min-width: 600px)" href="/src/styles/layout-mid.css" />
-	<!-- screens 720px-larger -->
-	<link rel="stylesheet" media="screen and (min-width: 960px)" href="/src/styles/layout-large.css" />
+	<!-- tablet layout -->
+	<link rel="stylesheet" media="screen and (min-width: 360px)" href="/src/styles/layout-mid.css" />
+	<!-- desktop screen -->
+	<link rel="stylesheet" media="screen and (min-width: 640px)" href="/src/styles/layout-large.css" />
+	<script src="https://kit.fontawesome.com/13308d5fee.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-<!--
-	TODO
-
-	1. add responsive images (picture, figure/figcaption) instead of img
-	2. mobile-desktop top navigation menu transition
-	3. fix image cropping in the Recent rail
-	4. actual blog page (lol)
-
-
--->
 
 <!-- top navigation -->
 <header id="global-header">
 	<nav>
-		<p>
-			L.&nbsp;I.
-		</p>
 		<menu>
 			<!--
 			<li>
@@ -57,6 +44,8 @@
 			<button>Sign up</button>
 		</a>
 	</nav>
+	<h1>Lorem Ipsum</h1>
+	<h2>Personal blog</h2>
 </header>
 
 <!-- main content area -->
@@ -65,13 +54,18 @@
         <p>
             <a href="/index.html">Back to blog</a>
         </p>
+		<h2>
+			Lorem Ipsum Dolor Sit Amet
+		</h2>
     </header>
 	<article class="blog-content">
         <p>
             Esse concludaturque usu id, et facete quaeque consequat vis. Quo ex ocurreret quaerendum. Mel cu ancillae similique. Mei no ubique persecuti, at sit iusto aliquam interpretaris. Et vim graeco principes.
         </p>
-        <figure>
-            [insert image here]
+        <figure class="blog-thumb">
+			<picture>
+				<img src="/src/images/blog-2.jpg" alt="Quidam officiis similique" width="100%" />
+			</picture>
         </figure>
         <p>
             Erroribus vituperatoribus no eos, no nobis alienum per. Dolor contentiones qui ei, exerci dissentiet comprehensam eum ne. Quo in tacimates recusabo scripserit, in mea tantas soleat imperdiet, ut vim illum dicam disputationi. Unum porro audiam at vel, eu nam primis regione. Vix ad everti diceret, ei omnium regione admodum sit.
@@ -94,18 +88,15 @@
         <p>
             Quidam officiis similique sea ei, vel tollit indoctum efficiendi ei, at nihil tantas platonem eos. Mazim nemore singulis an ius, nullam ornatus nam ei. Idque maiestatis vis ut. An mel everti invenire intellegam, legendos consequuntur eu sit. Solet nostrum consectetuer sea in.
         </p>
-        <figure>
-            <div style="display: flex; justify-content: center; width: calc(100% - var(--spacing-outer) * 2);">
-            <picture>
-                <source srcset="/src/images/content-2.jpg 4096w" sizes="(min-width: 600px) 300px, 100%" />
-                <img alt="Quidam officiis similique" />
-            </picture>
-            </div>
+        <figure class="blog-thumb">
+			<picture>
+				<img src="/src/images/content-2.jpg" alt="Quidam officiis similique" width="100%" />
+			</picture>
         </figure>
         <p>
             Diam facilisi insolens per cu, eos malorum voluptaria ei. Esse concludaturque usu id, et facete quaeque consequat vis. Quo ex ocurreret quaerendum. Mel cu ancillae similique. Mei no ubique persecuti, at sit iusto aliquam interpretaris.
         </p>
-        <ul>
+        <ul class="list">
             <li>
                 Id audiam aliquip sed
             </li>
@@ -120,18 +111,14 @@
             Dicat eripuit accumsan ad est. Facer facilisi ius ei, ea has cetero argumentum, vel at fugit temporibus. Deseruisse definitionem his et, an has veri integre abhorreant, nam alii epicurei et. Ei ferri aperiri pri. Nemore facilisi mediocrem at duo, zril ancillae ea sit. Ea eos essent ornatus percipit, mea an persecuti pertinacia, te suas semper per. Et qui debet veritus, ei qui utroque luptatum sadipscing.
         </p>
     </article>
-    <footer class="blog-footer">
-
-    </footer>
 </main>
 
 <script>
-/* just duplicating the navigation items because i'm too lazy */
 let q = document.querySelector(".blog-navigation-container").children[0];
 for (let i = 0, node, img; i < 5; i++) {
 	node = q.cloneNode(true);
 	img = node.querySelector("img");
-	img.setAttribute("src", `/src/images/blog-${i+2}.jpg`);
+	img.setAttribute("src", `src/images/blog-${i+2}.jpg`);
 	q.parentNode.appendChild(node);
 }
 </script>
@@ -171,7 +158,7 @@ for (let i = 0, node, img; i < 5; i++) {
 		</header>
 		<figure>
 			<picture>
-				<img src="/src/images/recent-1.jpg" alt="Pro eu apeirian suavitate dissentiet" />
+				<img src="src/images/recent-1.jpg" alt="Pro eu apeirian suavitate dissentiet" />
 			</picture>
 			<figcaption>
 				<p>
@@ -184,7 +171,7 @@ for (let i = 0, node, img; i < 5; i++) {
 		</figure>
 		<figure>
 			<picture>
-				<img src="/src/images/recent-2.jpg" alt="Qui dicunt ancillae id, ne mea homero persequeris" />
+				<img src="src/images/recent-2.jpg" alt="Qui dicunt ancillae id, ne mea homero persequeris" />
 			</picture>
 			<figcaption>
 				<p>
@@ -197,7 +184,7 @@ for (let i = 0, node, img; i < 5; i++) {
 		</figure>
 		<figure>
 			<picture>
-				<img src="/src/images/recent-3.jpg" alt="Ius delectus instructior eu, eu eum mentitum percipit" />
+				<img src="src/images/recent-3.jpg" alt="Ius delectus instructior eu, eu eum mentitum percipit" />
 			</picture>
 			<figcaption>
 				<p>
@@ -232,83 +219,47 @@ for (let i = 0, node, img; i < 5; i++) {
 <footer id="global-footer">
 	<section class="footer-contact">
 		<header>
-			<h3>Share your thoughts</h3>
-			<h2>Contact Me</h2>
+			<h3>
+				Contact
+			</h3>
 		</header>
-		<div class="footer-contact-card">
-			<section class="footer-contact-card-item">
-				<svg width="38" height="42" viewBox="0 0 38 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path d="M19.2499 23.8659C22.697 23.8659 25.4914 21.0715 25.4914 17.6244C25.4914 14.1773 22.697 11.3828 19.2499 11.3828C15.8027 11.3828 13.0083 14.1773 13.0083 17.6244C13.0083 21.0715 15.8027 23.8659 19.2499 23.8659Z" stroke="#1044FF" stroke-width="2" stroke-linejoin="round"/>
-					<path d="M2.48563 13.9832C6.42662 -3.34108 32.093 -3.32107 36.014 14.0033C38.3146 24.1658 31.993 32.7679 26.4516 38.0893C22.4306 41.9702 16.069 41.9702 12.028 38.0893C6.50664 32.7679 0.185058 24.1458 2.48563 13.9832Z" stroke="#1044FF" stroke-width="2" stroke-linejoin="round"/>
-				</svg>
-				<h3>
-					Office
-				</h3>
-				<p>
-					Mel timeam, 123 45-67
-				</p>
-			</section>
-		</div>
-		<div class="footer-contact-card">
-			<section class="footer-contact-card-item">
-				<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path d="M34.6168 28.5502C34.6168 29.1502 34.4835 29.7668 34.2002 30.3668C33.9168 30.9668 33.5502 31.5335 33.0668 32.0668C32.2502 32.9668 31.3502 33.6168 30.3335 34.0335C29.3335 34.4502 28.2502 34.6668 27.0835 34.6668C25.3835 34.6668 23.5668 34.2668 21.6502 33.4502C19.7335 32.6335 17.8168 31.5335 15.9168 30.1502C14.0002 28.7502 12.1835 27.2002 10.4502 25.4835C8.7335 23.7502 7.1835 21.9335 5.80016 20.0335C4.4335 18.1335 3.3335 16.2335 2.5335 14.3502C1.7335 12.4502 1.3335 10.6335 1.3335 8.90016C1.3335 7.76683 1.5335 6.6835 1.9335 5.6835C2.3335 4.66683 2.96683 3.7335 3.85016 2.90016C4.91683 1.85016 6.0835 1.3335 7.31683 1.3335C7.7835 1.3335 8.25016 1.4335 8.66683 1.6335C9.10016 1.8335 9.4835 2.1335 9.7835 2.56683L13.6502 8.01683C13.9502 8.4335 14.1668 8.81683 14.3168 9.1835C14.4668 9.5335 14.5502 9.8835 14.5502 10.2002C14.5502 10.6002 14.4335 11.0002 14.2002 11.3835C13.9835 11.7668 13.6668 12.1668 13.2668 12.5668L12.0002 13.8835C11.8168 14.0668 11.7335 14.2835 11.7335 14.5502C11.7335 14.6835 11.7502 14.8002 11.7835 14.9335C11.8335 15.0668 11.8835 15.1668 11.9168 15.2668C12.2168 15.8168 12.7335 16.5335 13.4668 17.4002C14.2168 18.2668 15.0168 19.1502 15.8835 20.0335C16.7835 20.9168 17.6502 21.7335 18.5335 22.4835C19.4002 23.2168 20.1168 23.7168 20.6835 24.0168C20.7668 24.0502 20.8668 24.1002 20.9835 24.1502C21.1168 24.2002 21.2502 24.2168 21.4002 24.2168C21.6835 24.2168 21.9002 24.1168 22.0835 23.9335L23.3502 22.6835C23.7668 22.2668 24.1668 21.9502 24.5502 21.7502C24.9335 21.5168 25.3168 21.4002 25.7335 21.4002C26.0502 21.4002 26.3835 21.4668 26.7502 21.6168C27.1168 21.7668 27.5002 21.9835 27.9168 22.2668L33.4335 26.1835C33.8668 26.4835 34.1668 26.8335 34.3502 27.2502C34.5168 27.6668 34.6168 28.0835 34.6168 28.5502Z" stroke="#1044FF" stroke-width="2" stroke-miterlimit="10" />
-				</svg>
-				<h3>
-					Call Me
-				</h3>
-				<p>
-					+1 234 567 89 00
-				</p>
-			</section>
-		</div>
-		<div class="footer-contact-card">
-			<section class="footer-contact-card-item">
-				<svg width="36" height="32" viewBox="0 0 36 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path d="M1.3335 10.4339C1.3335 4.49053 4.66683 1.94336 9.66683 1.94336H26.3335C31.3335 1.94336 34.6668 4.49053 34.6668 10.4339V22.3207C34.6668 28.2641 31.3335 30.8113 26.3335 30.8113H9.66683" />
-					<path d="M26.3337 11.2832L21.117 15.5285C19.4003 16.9209 16.5837 16.9209 14.867 15.5285L9.66699 11.2832" />
-					<path d="M1.3335 24.019H11.3335" />
-					<path d="M1.3335 17.2266H6.3335" />
-				</svg>
-				<h3>
-					Write Me
-				</h3>
-				<p>
-					info@gmail.com
-				</p>
-			</section>
-		</div>
+		<section class="footer-contact-card">
+			<p>
+				<i class="fa-solid fa-location-dot"></i> Mel timeam, 123 45-67
+			</p>
+		</section>
+		<section class="footer-contact-card">
+			<p>
+				<i class="fa-solid fa-phone"></i> +1 234 567 89 00
+			</p>
+		</section>
+		<section class="footer-contact-card">
+			<p>
+				<i class="fa-solid fa-envelope"></i> info@gmail.com
+			</p>
+		</section>
 	</section>
 	<section class="footer-notes">
 		<section class="footer-notes-primary">
 			<header>
-				<h2>
-					L. I.
-				</h2>
+				<h3>
+					Follow
+				</h3>
 			</header>
-			<p>
-				Sit alii tantas viderer no. An mel nostrum appareat. Ad consul facilis est. Vix habeo scaevola percipitur ne, qui noster abhorreant ne.
-			</p>
 			<menu>
 				<li>
 					<a href="#">
-						<svg width="14" height="27" viewBox="0 0 14 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 9H0V13.5H3.5V27H9.33333V13.5H13.5823L14 9H9.33333V7.12463C9.33333 6.05025 9.55733 5.625 10.6342 5.625H14V0H9.55733C5.362 0 3.5 1.78087 3.5 5.19187V9Z" fill="#FCD8D4"/>
-						</svg>
+						<i class="fa-brands fa-facebook"></i>
 					</a>
 				</li>
 				<li>
 					<a href="#">
-						<svg width="27" height="23" viewBox="0 0 27 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M27 2.72288C26.0066 3.18514 24.939 3.49646 23.8185 3.63679C24.9626 2.91863 25.8413 1.78066 26.2541 0.424528C25.1842 1.08962 23.9985 1.57311 22.7362 1.83373C21.7271 0.705189 20.286 0 18.693 0C15.1166 0 12.4886 3.49764 13.2964 7.12854C8.694 6.88679 4.6125 4.57547 1.87987 1.0625C0.428625 3.67217 1.12725 7.08608 3.59325 8.81486C2.6865 8.7842 1.8315 8.52359 1.08563 8.08844C1.02488 10.7783 2.86425 13.2948 5.52825 13.855C4.74863 14.0767 3.89475 14.1285 3.02625 13.954C3.7305 16.2606 5.77575 17.9387 8.20125 17.9858C5.8725 19.8998 2.9385 20.7547 0 20.3915C2.45138 22.0389 5.364 23 8.4915 23C18.7762 23 24.5869 13.895 24.2359 5.72877C25.3181 4.9092 26.2575 3.88679 27 2.72288Z" fill="#FCD8D4"/>
-						</svg>
+						<i class="fa-brands fa-twitter"></i>
 					</a>
 				</li>
 				<li>
 					<a href="#">
-						<svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M13.5 0C9.83362 0 9.37463 0.01575 7.93463 0.081C3.03188 0.306 0.307125 3.02625 0.082125 7.9335C0.01575 9.37463 0 9.83362 0 13.5C0 17.1664 0.01575 17.6265 0.081 19.0665C0.306 23.9692 3.02625 26.694 7.9335 26.919C9.37463 26.9843 9.83362 27 13.5 27C17.1664 27 17.6265 26.9843 19.0665 26.919C23.9648 26.694 26.6963 23.9737 26.9179 19.0665C26.9843 17.6265 27 17.1664 27 13.5C27 9.83362 26.9843 9.37463 26.919 7.93463C26.6985 3.03638 23.9749 0.307125 19.0676 0.082125C17.6265 0.01575 17.1664 0 13.5 0ZM13.5 2.43337C17.1045 2.43337 17.532 2.44687 18.9562 2.51212C22.6147 2.67862 24.3236 4.4145 24.4901 8.046C24.5554 9.46912 24.5677 9.89662 24.5677 13.5011C24.5677 17.1068 24.5542 17.5331 24.4901 18.9562C24.3225 22.5844 22.6181 24.3236 18.9562 24.4901C17.532 24.5554 17.1068 24.5689 13.5 24.5689C9.8955 24.5689 9.468 24.5554 8.04488 24.4901C4.37738 24.3225 2.6775 22.5787 2.511 18.9551C2.44575 17.532 2.43225 17.1056 2.43225 13.5C2.43225 9.8955 2.44688 9.46912 2.511 8.04487C2.67863 4.4145 4.383 2.6775 8.04488 2.511C9.46912 2.44687 9.8955 2.43337 13.5 2.43337ZM6.56787 13.4996C6.56787 9.67126 9.67175 6.56738 13.5001 6.56738C17.3285 6.56738 20.4324 9.67126 20.4324 13.4996C20.4324 17.3291 17.3285 20.433 13.5001 20.433C9.67175 20.433 6.56787 17.328 6.56787 13.4996ZM13.5 18C11.0149 18 9 15.9862 9 13.5C9 11.0149 11.0149 9 13.5 9C15.9851 9 18 11.0149 18 13.5C18 15.9862 15.9851 18 13.5 18ZM19.0854 6.2948C19.0854 5.40043 19.8111 4.6748 20.7066 4.6748C21.6009 4.6748 22.3254 5.40043 22.3254 6.2948C22.3254 7.18918 21.6009 7.9148 20.7066 7.9148C19.8111 7.9148 19.0854 7.18918 19.0854 6.2948Z" fill="#FCD8D4"/>
-						</svg>
+						<i class="fa-brands fa-instagram"></i>
 					</a>
 				</li>
 			</menu>
@@ -346,7 +297,7 @@ for (let i = 0, node, img; i < 5; i++) {
 			</section>
 		</section>
 	</section>
-	<section class="footer-notes-copyright">
+	<section class="footer-copyright">
 		<h3>
 			© Copyright information &amp; credits
 		</h3>
@@ -356,10 +307,13 @@ for (let i = 0, node, img; i < 5; i++) {
 		<p>
 			Blog website based on the proposed layout, theme and social icons of the <a href="https://www.figma.com/file/wCmTWu3Gynwi2TcIFRRbf9/Blog-Website-Design" rel="nofollow noopener">Figma</a> project.
 		</p>
+		<p>
+			Font Awesome used for some of the icons.
+		</p>
 	</section>
 </footer>
 
-<script src="/src/scripts/konami.js"></script>
+<script src="src/scripts/konami.js"></script>
 
 </body>
 
