@@ -40,23 +40,6 @@ button:not(.button-selected):hover {
 
 
 
-
-
-/*
-
-    ########################################################
-        REMOVE .crop
-
-*/
-
-
-/* cropped images */
-.crop::after {
-    max-width: 70px;
-    height: auto;
-    background: attr(data-src url);
-}
-
 /* ================================ *\
     # body layout
 \* ================================ */
@@ -115,6 +98,25 @@ body {
 #global-header h2 {
     margin-top: 14px;
     font-size: 20px;
+}
+
+/* blog page header */
+.blog-header a {
+    color: var(--colors-main);
+}
+.blog-content blockquote {
+    margin: 0;
+    padding-left: 25px;
+    border-left: 5px solid var(--colors-main);
+}
+.blog-content > * {
+    margin: 20px 0;
+}
+.blog-content ul {
+    list-style-image: url('data:image/svg+xml,%3Csvg%20width%3D%2218%22%20height%3D%2210%22%20viewBox%3D%220%200%2018%2010%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Ccircle%20cx%3D%224%22%20cy%3D%224%22%20r%3D%224%22%20fill%3D%22%2314f%22%20%2F%3E%3C%2Fsvg%3E');
+}
+.blog-content ul > li {
+    margin-top: 8px;
 }
 
 /* ================================ *\
@@ -219,16 +221,7 @@ body {
 
 
 /* sidebar - reccent */
-/*
-.sidebar-group-recent picture {
-    overflow: hidden;
-    flex-basis: 40%;
-}*/
-/*
 
-        TEST #############################################################################
-
-*/
 .sidebar-group-recent img {
     width: 70px;
     height: 48px;
@@ -237,7 +230,7 @@ body {
 
 .sidebar-group-recent figure {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
     gap: 16px;
     line-height: 1.5em;
 }

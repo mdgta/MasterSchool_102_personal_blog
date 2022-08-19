@@ -57,18 +57,76 @@
 			<button>Sign up</button>
 		</a>
 	</nav>
-	<h1>Lorem Ipsum</h1>
-	<h2>Personal blog</h2>
 </header>
 
 <!-- main content area -->
 <main id="global-main">
-	<p>
-        main content
-    </p>
+    <header class="blog-header">
+        <p>
+            <a href="/index.html">Back to blog</a>
+        </p>
+    </header>
+	<article class="blog-content">
+        <p>
+            Esse concludaturque usu id, et facete quaeque consequat vis. Quo ex ocurreret quaerendum. Mel cu ancillae similique. Mei no ubique persecuti, at sit iusto aliquam interpretaris. Et vim graeco principes.
+        </p>
+        <figure>
+            [insert image here]
+        </figure>
+        <p>
+            Erroribus vituperatoribus no eos, no nobis alienum per. Dolor contentiones qui ei, exerci dissentiet comprehensam eum ne. Quo in tacimates recusabo scripserit, in mea tantas soleat imperdiet, ut vim illum dicam disputationi. Unum porro audiam at vel, eu nam primis regione. Vix ad everti diceret, ei omnium regione admodum sit.
+        </p>
+        <p>
+            Mea an decore veritus probatus. Nec ea affert verterem. Vix probo semper et, mea simul graeco diceret te. Qui no stet ferri qualisque, ut clita scripserit nec. Ei mei fabellas gubergren, ius nostro senserit adversarium te.
+        </p>
+        <header>
+            <h2>Cu dico nullam pri</h2>
+        </header>
+        <p>
+            Duo stet possim quaerendum eu, cum in invenire platonem. An animal assentior nam, sed qualisque deterruisset ea. Ei qui melius erroribus intellegebat, sed dico apeirian ei.
+        </p>
+        <p>
+            Ea sed vivendo offendit persecuti, porro animal no cum. Eu pro ludus dignissim. Eos debet molestiae constituto ne, quo consul interesset ei, cotidieque theophrastus ea his. Ei nominavi suavitate deterruisset qui, assum ubique quodsi sea ad. At partem vocent vel, ius id viris utinam.
+        </p>
+        <blockquote>
+            Nam natum volutpat eu. Natum elitr vel te. Id qui purto dicit, bonorum minimum et sit. Cum ei assum tation homero, at per assum dicit verterem. Lorem deterruisset ea vis, usu eu hinc lorem inciderint, et mel solum autem molestiae.
+        </blockquote>
+        <p>
+            Quidam officiis similique sea ei, vel tollit indoctum efficiendi ei, at nihil tantas platonem eos. Mazim nemore singulis an ius, nullam ornatus nam ei. Idque maiestatis vis ut. An mel everti invenire intellegam, legendos consequuntur eu sit. Solet nostrum consectetuer sea in.
+        </p>
+        <figure>
+            <div style="display: flex; justify-content: center; width: calc(100% - var(--spacing-outer) * 2);">
+            <picture>
+                <source srcset="/src/images/content-2.jpg 4096w" sizes="(min-width: 600px) 300px, 100%" />
+                <img alt="Quidam officiis similique" />
+            </picture>
+            </div>
+        </figure>
+        <p>
+            Diam facilisi insolens per cu, eos malorum voluptaria ei. Esse concludaturque usu id, et facete quaeque consequat vis. Quo ex ocurreret quaerendum. Mel cu ancillae similique. Mei no ubique persecuti, at sit iusto aliquam interpretaris.
+        </p>
+        <ul>
+            <li>
+                Id audiam aliquip sed
+            </li>
+            <li>
+                Graece postea usu ea
+            </li>
+            <li>
+                Sea diceret pertinax in
+            </li>
+        </ul>
+        <p>
+            Dicat eripuit accumsan ad est. Facer facilisi ius ei, ea has cetero argumentum, vel at fugit temporibus. Deseruisse definitionem his et, an has veri integre abhorreant, nam alii epicurei et. Ei ferri aperiri pri. Nemore facilisi mediocrem at duo, zril ancillae ea sit. Ea eos essent ornatus percipit, mea an persecuti pertinacia, te suas semper per. Et qui debet veritus, ei qui utroque luptatum sadipscing.
+        </p>
+    </article>
+    <footer class="blog-footer">
+
+    </footer>
 </main>
 
 <script>
+/* just duplicating the navigation items because i'm too lazy */
 let q = document.querySelector(".blog-navigation-container").children[0];
 for (let i = 0, node, img; i < 5; i++) {
 	node = q.cloneNode(true);
